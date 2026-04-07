@@ -1,3 +1,4 @@
+{% set python_min = "3.9" %}
 {% set name = "pylibftdi" %}
 {% set version = "0.23.0" %}
 
@@ -11,22 +12,23 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.4
+    - python {{ python_min }}
     - pip
     - poetry
   run:
-    - python >=3.4
+    - python >={{ python_min }}
     - libftdi
 
 test:
   imports:
     - pylibftdi
   requires:
+    - python {{ python_min }}
     - pip
   commands:
     - pip check
