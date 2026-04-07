@@ -1,6 +1,6 @@
-{% set python_min = "3.9" %}
+{% set python_min = "3.10" %}
 {% set name = "pylibftdi" %}
-{% set version = "0.24.1" %}
+{% set version = "0.24.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bf5b4c6ba73d79a6f6df849c345b00ba763d023201bed9ba51d876a4397b16d8
+  sha256: e2229bc10d077f018cbe7b2b490227b2b538643fa6f7bff132cde15549ca129b
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
