@@ -1,14 +1,14 @@
 {% set python_min = "3.10" %}
 {% set name = "pylibftdi" %}
-{% set version = "0.24.0" %}
+{% set version = "0.24.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e2229bc10d077f018cbe7b2b490227b2b538643fa6f7bff132cde15549ca129b
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: c892e71178055490b90db488a0195cb5815b1554061c4f31f13c318806d532e0
 
 build:
   noarch: python
